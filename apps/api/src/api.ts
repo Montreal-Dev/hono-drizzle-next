@@ -3,7 +3,6 @@ import { serve } from "@hono/node-server";
 import { cors } from "hono/cors";
 import v1 from "./v1/v1";
 import { logger } from "hono/logger";
-import { serveConfig } from "../lib/settings";
 
 const corsSettingsDev = {
   origin: ['*'],

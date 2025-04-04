@@ -4,7 +4,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "pnpm --filter web --parallel \"/^dev:.*/\"",
+    "dev:web": "next dev --turbopack",
+    "dev:tsc": "tsc --watch",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -12,6 +14,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "api": "workspace:*",
     "@workspace/ui": "workspace:*",
     "lucide-react": "^0.475.0",
     "next": "^15.2.3",

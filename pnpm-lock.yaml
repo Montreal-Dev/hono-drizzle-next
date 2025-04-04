@@ -57,6 +57,9 @@ importers:
       '@workspace/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      api:
+        specifier: workspace:*
+        version: link:../api
       lucide-react:
         specifier: ^0.475.0
         version: 0.475.0(react@19.0.0)

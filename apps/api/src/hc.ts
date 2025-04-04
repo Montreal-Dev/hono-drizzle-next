@@ -3,7 +3,7 @@ import {
     type InferRequestType,
     type InferResponseType,
   } from "hono/client";
-  import type { app } from "./api";
+  import type { app } from "./api.js";
   
   // assign the client to a variable to calculate the type when compiling
   const client = honoClient<typeof app>("");
