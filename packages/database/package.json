@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "echo 'Add dev script here'",
-    "build": "echo 'Add build script here'",
-    "test": "echo 'Add test script here'",
-    "lint": "echo 'Add lint script here'"
+    "db:studio": "drizzle-kit studio --config=drizzle-studio.config.ts",
+    "db:check": "drizzle-kit check --config=drizzle-studio.config.ts",
+    "db:pull": "drizzle-kit pull --config=drizzle-studio.config.ts",
+    "db:push": "drizzle-kit push --config=drizzle-studio.config.ts"
   },
   "dependencies": {
     "dotenv": "catalog:",
