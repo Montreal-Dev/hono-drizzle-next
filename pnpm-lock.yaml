@@ -44,6 +44,9 @@ importers:
       '@hono/zod-validator':
         specifier: ^0.4.3
         version: 0.4.3(hono@4.7.5)(zod@3.24.2)
+      database:
+        specifier: workspace:*
+        version: link:../../packages/database
       dotenv:
         specifier: 'catalog:'
         version: 16.4.7

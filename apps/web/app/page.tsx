@@ -1,10 +1,11 @@
-"use client";
+'use server';
 
 import React from "react";
 import { Blob } from "@/components/icons/default";
 import LocalToggle from "@/components/base/localeToggle";
 import Clock from "@/components/base/clock";
 import ThemeToggle from "@/components/base/themeToggle";
+import { getConnection } from "@/actions/demoActions";
 
 const pangram = "The quick brown fox jumps over the lazy dog.";
 
@@ -19,7 +20,9 @@ const usefulLinks = [
   },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const connection = await getConnection();
+
   const displayPangram = () => (
     <>
       <p className="opacity-100">{pangram}</p>
@@ -118,6 +121,7 @@ export default function Page() {
                 <div className="font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl ">
                   <p>
                     <span>
+                      {connection ? `Success` : `Failded`}
                       {/*!isLoading
                         ? `${t(`connection.${data?.server || "failed"}`)},`
                         : `${t("connection.loading")}`*/}

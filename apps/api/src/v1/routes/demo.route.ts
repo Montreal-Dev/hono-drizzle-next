@@ -1,16 +1,20 @@
-import { zValidator } from "@hono/zod-validator";
+import db from "database/db";
 import { Status } from "../../../lib/statusCode";
 import createV1App from "../createApp";
-import { z } from "zod";
-import { zodValidatorError } from "../../../lib/zodValidator";
 import env from "../../../env";
+import { connect } from "http2";
+
 
 
 export const demoRoute = createV1App()
-.get('/', async (c) => {
-    return c.json({message: `demo in ${env.NODE_ENV}`}, Status.OK)
+.get('/messages', async (c) => {
+    const messages = await db.query.demoTable.findMany()
+    return c.json({message: messages}, Status.OK)
 })
-.get('/:id', zValidator('param', z.object({id: z.coerce.number()}), zodValidatorError), async (c)=>{
-    const {id} = c.req.valid('param')
-    return c.json({success: true, message: `Your id is: ${id}`})
+.get('/connection', async (c) => {
+    const isConnected = !!await db.$client.query('SELECT 1 + 1 AS solution') as boolean;
+    return c.json({message: 'ok'}, Status.OK)
+})
+.put('/messages', async (c) => {
+
 })

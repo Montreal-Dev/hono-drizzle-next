@@ -20,6 +20,7 @@
   "dependencies": {
     "@hono/node-server": "^1.14.0",
     "@hono/zod-validator": "^0.4.3",
+    "database": "workspace:*",
     "dotenv": "catalog:",
     "dotenv-expand": "catalog:",
     "hono": "^4.7.5",
