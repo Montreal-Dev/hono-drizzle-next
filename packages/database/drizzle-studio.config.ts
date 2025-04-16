@@ -3,7 +3,7 @@ import env from "./src/env/env.studio";
 
 
 export default {
-  schema: "./src/schemas/ex_schema.ts",
+  schema: "./src/schemas/*",
   out: "./drizzle",
   dialect: "postgresql",
   dbCredentials: {

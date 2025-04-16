@@ -6,7 +6,7 @@ import {
   DatabaseEnvSchema,
 } from "./shape";
 
-expand(config({ path: "./.env.studio.dev" }));
+expand(config({ path: "./.env.studio" }));
 
 let env: DatabaseEnv;
 try {
