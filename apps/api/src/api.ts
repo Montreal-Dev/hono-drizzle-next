@@ -12,8 +12,7 @@ const corsSettingsDev = {
 };
 
 export const app = new Hono()
-.use("*", cors(corsSettingsDev))
-.use(logger())
+.use(cors(corsSettingsDev))
 .route("/", v1);
 
 const port = 3001;

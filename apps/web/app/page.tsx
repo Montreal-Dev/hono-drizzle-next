@@ -1,6 +1,6 @@
 'use server';
 
-import React from "react";
+import React, { JSX } from "react";
 import { Blob } from "@/components/icons/default";
 import LocalToggle from "@/components/base/localeToggle";
 import Clock from "@/components/base/clock";
@@ -21,7 +21,7 @@ const usefulLinks = [
 ];
 
 export default async function Page() {
-  const connection = await getConnection();
+  const {connection, res} = await getConnection();
 
   const displayPangram = () => (
     <>
@@ -34,22 +34,22 @@ export default async function Page() {
     </>
   );
 
-  /* const displayData = () => {
-    if (data && Array.isArray(data.payload) && data.payload?.[0]) {
+  const displayData = () => {
+    if (res && Array.isArray(res.query) && res.query?.[0]) {
       let componentArray: JSX.Element[] = [];
-      const item = data.payload?.[0];
+      const item = res.query[0];
       componentArray = Object.keys(item).map((key) => (
         <p key={key}>{`${key}: ${item?.[
-          key as keyof (typeof data.payload)[0]
+          key as keyof (typeof res.query)[0]
         ]}`}</p>
       ));
       return componentArray;
     }
 
-    // Process failed data without payload
-    const errPayload = data?.payload as any;
+    // Process failed data without query
+    const errPayload = res?.query as any;
     return <p> {errPayload?.message ?? "ERR_"}</p>;
-  }; */
+  };
 
   return (
     <>
@@ -141,8 +141,7 @@ export default async function Page() {
                 className="ml-auto mt-auto text-xl max-md:text-lg max-sm:text-lg px-2 md:px-5 sm:px-5 py-2 lg:text-2xl xl:text-2xl max-sm:[writing-mode:vertical-rl] max-sm:rotate-180 ,"
                 style={{ lineHeight: "10px" }}
               >
-                {/*data && data.payload ? displayData() : displayPangram()*/}
-                {displayPangram()}
+                {res && res.query ? displayData() : displayPangram()}
               </div>
             </div>
           </div>

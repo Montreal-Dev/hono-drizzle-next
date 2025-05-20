@@ -2,6 +2,7 @@
   "name": "database",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "db:studio": "drizzle-kit studio --config=drizzle-studio.config.ts",
     "db:check": "drizzle-kit check --config=drizzle-studio.config.ts",
@@ -23,6 +24,6 @@
   },
   "exports": {
     "./db": "./src/database.ts",
-    "./schemas": "./src/schemas/*.ts"
+    "./schemas/*": "./src/schemas/*.ts"
   }
 }

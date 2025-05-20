@@ -6,15 +6,15 @@ import {
   DatabaseEnvSchema,
 } from "./shape";
 
-expand(config({ path: "./.env.studio" }));
+expand(config({ path: "./.env.dev" }));
 
 let env: DatabaseEnv;
 try {
   env = DatabaseEnvSchema.parse(process.env);
-  console.log("✔️ STUDIO .env.studio LOADED", env.NODE_ENV);
+  console.log("✔️ DEVELOPMENT .env.dev LOADED", env.NODE_ENV);
 } catch (e) {
   const error = e as DatabaseEnvError;
-  console.error(`❌ Invalid studio environment variables:`);
+  console.error(`❌ Invalid development environment variables:`);
   console.error(error.flatten().fieldErrors);
   process.exit(1);
 }

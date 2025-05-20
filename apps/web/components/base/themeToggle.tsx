@@ -1,3 +1,5 @@
+'use client';
+
 import { useTheme } from "next-themes";
 import { DarkMode } from "../icons/default";
 import { Button } from "@workspace/ui/components/button";
