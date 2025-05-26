@@ -117,7 +117,7 @@ Before running this project, make sure you have the following installed:
 | `db:push`   | Pushes schema updates to the DB |
 
 <!-- USEFUL LINKS -->
-## Usefull Links
+## useful Links
 [![Hono][hono-shield]][hono-url]
 [![Drizzle][drizzle-shield]][drizzle-url]
 [![Next.js][next-shield]][next-url]
