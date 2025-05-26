@@ -116,7 +116,7 @@ export default async function Page() {
             <div className="absolute bottom-0 w-full h-auto flex">
               <div className="grid max-w-10 px-2 md:px-5 sm:px-5 mt-auto">
                 <div className="font-regular text-sm">
-                  app/api/exemple/route.ts
+                  apps/api/src/v1/routes/demo.route.ts
                 </div>
                 <div className="font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl ">
                   <p>
