@@ -1,67 +1,149 @@
-# hono-drizzle-next
 
-A monorepo template integrating **Hono.js**, **Drizzle ORM**, **Next.js 14**, and **shadcn/ui**. Designed for building modern, full-stack TypeScript applications with a focus on modularity and developer experience.([GitHub][1])
+<!-- PROJECT LOGO -->
+<div align="center">
+   <!-- 
+      <a href="https://github.com/Montreal-Dev/hono-drizzle-next">
+         <img src="images/logo.png" alt="Logo" width="80" height="80">
+      </a> 
+   -->
 
-## 🧰 Tech Stack
+  <h3 align="center">hono-drizzle-next</h3>
 
-* **Next.js 14**: Frontend framework for building React applications.
-* **Hono.js**: Lightweight web framework for the backend.
-* **Drizzle ORM**: Type-safe ORM for database interactions.
-* **shadcn/ui**: Component library built with Radix UI and Tailwind CSS.
-* **Turborepo**: Monorepo build system for managing multiple packages.
-* **pnpm**: Fast, disk space-efficient package manager.([GitHub][2])
+  <p align="center">
+   A monorepo template integrating Hono.js, Drizzle ORM, Next.js, and shadcn/ui.
+   <br/>
+   Designed for quick, full-stack TypeScript applications with a focus on modularity.
+    <br />
+    <br />
+   &middot;
+      <a href="/">View Demo</a>
+   &middot;
+  </p>
+</div>
 
-## 📦 Monorepo Structure
+---
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+    </li>
+    <li><a href="#project-structure">Project Structure</a></li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#commands">Commands</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
 
-* `apps/web`: Main Next.js application.
-* `packages/ui`: Shared UI components using shadcn/ui.
-* `packages/config`: Shared configurations (e.g., Tailwind, ESLint).([GitHub][1])
+<!-- ABOUT THE PROJECT -->
+## About The Project
+**hono-drizzle-next** is a full-stack monorepo starter combining:
 
-## 🚀 Getting Started
+- **Next.js 15** for high-performance frontend
+- **shadcn/ui** for reusable, shared UI components & accelerates prototyping.
+- **Hono** for Batteries Included API with fully typed client-server contracts. (RPC) 
+- **Drizzle ORM** for database-agnostic & type-safe database access out of the box.
 
-1. **Clone the repository**:
+<!-- PROJECT STRUCTURE -->
+## Project Structure
+```tree
+apps/
+  ├─ web     # Next.js frontend
+  └─ api     # Hono backend
 
-   ```bash
-   git clone https://github.com/Montreal-Dev/hono-drizzle-next.git
-   cd hono-drizzle-next
-   ```
-
-
-
-2. **Install dependencies**:
-
-   ```bash
-   pnpm install
-   ```
-
-
-
-3. **Run the development server**:
-
-   ```bash
-   pnpm dev
-   ```
-
-
-
-This will start the Next.js application at `http://localhost:3000`.
-
-## 🧩 Adding UI Components
-
-To add a new component (e.g., `button`) to the `web` app:
-
-```bash
-pnpm dlx shadcn@latest add button -c apps/web
+packages/
+  ├─ ui          # Shared UI components (shadcn/ui)
+  ├─ database    # Drizzle ORM and schema
+  └─ ...config      # Shared config: TypeScript, ESLint, Tailwind, etc.
 ```
 
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+Before running this project, make sure you have the following installed:
+
+- [pnpm](https://pnpm.io/installation) – Fast, disk-efficient package manager
+- [PostgreSQL](https://www.postgresql.org/download/) – Open-source SQL database
+- [Turborepo](https://turbo.build/repo/docs/install) – High-performance monorepo build system
+- [Node.js (v20+)](https://nodejs.org/en/download/) – Required runtime for Turbo and pnpm
 
 
-This will place the UI component in the `packages/ui/src/components` directory.
+### Installation
 
-## 🎨 Tailwind CSS Configuration
+1. Clone the repo
+2. ...
 
-The `tailwind.config.ts` and `globals.css` are pre-configured to utilize components from the `ui` package.
+<!-- USAGE EXAMPLES -->
+## Commands
+### 📦 Root
+| Script    | Description                                   |
+| --------- | --------------------------------------------- |
+| `dev`     | Starts all dev servers via Turborepo          |
+| `dev:web` | Starts frontend & backend TypeScript watchers |
+| `dev:api` | Runs the Hono API dev server                  |
+| `dev:tsc` | Runs all TypeScript compilers in watch mode   |
+| `build`   | Builds the whole monorepo                     |
+| `lint`    | Runs ESLint across all packages               |
+| `format`  | Formats code using Prettier                   |
 
-## 📄 License
 
+### 🖥 Web
+| Script      | Description                            |
+| ----------- | -------------------------------------- |
+| `dev`       | Runs Web only                          |
+| `dev:web`   | Starts Next.js                         |
+| `dev:tsc`   | Watches for TS changes                 |
+| `build`     | Builds the Next.js app                 |
+| `start`     | Starts the production build            |
+| `lint`      | Lints with ESLint                      |
+| `lint:fix`  | Fixes lint issues                      |
+| `typecheck` | Type-checks without emitting output    |
+
+### 🗄 Database
+| Script      | Description                     |
+| ----------- | ------------------------------- |
+| `db:studio` | Opens Drizzle Studio            |
+| `db:check`  | Checks schema diff              |
+| `db:pull`   | Introspects current DB schema   |
+| `db:push`   | Pushes schema updates to the DB |
+
+--- 
+<!-- USEFUL LINKS -->
+## Usefull Links
+[![Hono][hono-shield]][hono-url]
+[![Drizzle][drizzle-shield]][drizzle-url]
+[![Next.js][next-shield]][next-url]
+[![shadcn/ui][shad-shield]][shad-url]
+[![Turborepo][turborepo-shield]][turborepo-url]
+
+## license
 This project is licensed under the [MIT License](LICENSE).
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- __shields -->
+[hono-shield]: https://img.shields.io/badge/Hono-E36002?logo=hono&logoColor=fff
+[drizzle-shield]: https://img.shields.io/badge/Drizzle-C5F74F?logo=drizzle&logoColor=000
+[next-shield]: https://img.shields.io/badge/Next.js-black?logo=next.js&logoColor=white
+[next-url]: https://img.shields.io/badge/Next.js-black?logo=next.js&logoColor=white
+[shad-shield]: https://img.shields.io/badge/shadcn%2Fui-000?logo=shadcnui&logoColor=fff
+[turborepo-shield]: https://img.shields.io/badge/Hono-E36002?logo=hono&logoColor=fff
+
+<!-- __urls -->
+[hono-url]: https://hono.dev
+[drizzle-url]: https://orm.drizzle.team
+[next-url]: https://nextjs.org
+[shad-url]: https://ui.shadcn.dev
+[turborepo-url]: https://turbo.build/repo
