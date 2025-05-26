@@ -1,12 +1,9 @@
 
 <!-- PROJECT LOGO -->
 <div align="center">
-   <!-- 
       <a href="https://github.com/Montreal-Dev/hono-drizzle-next">
-         <img src="images/logo.png" alt="Logo" width="80" height="80">
+         <img src="https://i.postimg.cc/YqJQLbk2/screencapture-localhost-3000-en-2023-12-21-01-10-11.png" alt="Logo" width="320" height="180">
       </a> 
-   -->
-
   <h3 align="center">hono-drizzle-next</h3>
 
   <p align="center">
@@ -119,7 +116,6 @@ Before running this project, make sure you have the following installed:
 | `db:pull`   | Introspects current DB schema   |
 | `db:push`   | Pushes schema updates to the DB |
 
---- 
 <!-- USEFUL LINKS -->
 ## Usefull Links
 [![Hono][hono-shield]][hono-url]
