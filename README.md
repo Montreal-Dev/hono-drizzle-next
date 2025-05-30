@@ -1,4 +1,3 @@
-
 <!-- PROJECT LOGO -->
 <div align="center">
       <a href="https://github.com/Montreal-Dev/hono-drizzle-next">
@@ -19,6 +18,7 @@
 </div>
 
 ---
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -40,16 +40,20 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
+
 **hono-drizzle-next** is a full-stack monorepo starter combining:
 
 - **Next.js 15** for high-performance frontend
 - **shadcn/ui** for reusable, shared UI components & accelerates prototyping.
-- **Hono** for Batteries Included API with fully typed client-server contracts. (RPC) 
+- **Hono** for Batteries Included API with fully typed client-server contracts. (RPC)
 - **Drizzle ORM** for database-agnostic & type-safe database access out of the box.
 
 <!-- PROJECT STRUCTURE -->
+
 ## Project Structure
+
 ```tree
 apps/
   ├─ web     # Next.js frontend
@@ -62,6 +66,7 @@ packages/
 ```
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -76,15 +81,17 @@ Before running this project, make sure you have the following installed:
 - [Turborepo](https://turbo.build/repo/docs/install) – High-performance monorepo build system
 - [Node.js (v20+)](https://nodejs.org/en/download/) – Required runtime for Turbo and pnpm
 
-
 ### Installation
 
 1. Clone the repo
 2. ...
 
 <!-- USAGE EXAMPLES -->
+
 ## Commands
+
 ### 📦 Root
+
 | Script    | Description                                   |
 | --------- | --------------------------------------------- |
 | `dev`     | Starts all dev servers via Turborepo          |
@@ -95,20 +102,21 @@ Before running this project, make sure you have the following installed:
 | `lint`    | Runs ESLint across all packages               |
 | `format`  | Formats code using Prettier                   |
 
-
 ### 🖥 Web
-| Script      | Description                            |
-| ----------- | -------------------------------------- |
-| `dev`       | Runs Web only                          |
-| `dev:web`   | Starts Next.js                         |
-| `dev:tsc`   | Watches for TS changes                 |
-| `build`     | Builds the Next.js app                 |
-| `start`     | Starts the production build            |
-| `lint`      | Lints with ESLint                      |
-| `lint:fix`  | Fixes lint issues                      |
-| `typecheck` | Type-checks without emitting output    |
+
+| Script      | Description                         |
+| ----------- | ----------------------------------- |
+| `dev`       | Runs Web only                       |
+| `dev:web`   | Starts Next.js                      |
+| `dev:tsc`   | Watches for TS changes              |
+| `build`     | Builds the Next.js app              |
+| `start`     | Starts the production build         |
+| `lint`      | Lints with ESLint                   |
+| `lint:fix`  | Fixes lint issues                   |
+| `typecheck` | Type-checks without emitting output |
 
 ### 🗄 Database
+
 | Script      | Description                     |
 | ----------- | ------------------------------- |
 | `db:studio` | Opens Drizzle Studio            |
@@ -117,7 +125,9 @@ Before running this project, make sure you have the following installed:
 | `db:push`   | Pushes schema updates to the DB |
 
 <!-- USEFUL LINKS -->
+
 ## useful Links
+
 [![Hono][hono-shield]][hono-url]
 [![Drizzle][drizzle-shield]][drizzle-url]
 [![Next.js][next-shield]][next-url]
@@ -125,11 +135,12 @@ Before running this project, make sure you have the following installed:
 [![Turborepo][turborepo-shield]][turborepo-url]
 
 ## license
-This project is licensed under the [MIT License](LICENSE).
 
+This project is licensed under the [MIT License](LICENSE).
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- __shields -->
+
 [hono-shield]: https://img.shields.io/badge/Hono-E36002?logo=hono&logoColor=fff
 [drizzle-shield]: https://img.shields.io/badge/Drizzle-C5F74F?logo=drizzle&logoColor=000
 [next-shield]: https://img.shields.io/badge/Next.js-black?logo=next.js&logoColor=white
@@ -138,6 +149,7 @@ This project is licensed under the [MIT License](LICENSE).
 [turborepo-shield]: https://img.shields.io/badge/Hono-E36002?logo=hono&logoColor=fff
 
 <!-- __urls -->
+
 [hono-url]: https://hono.dev
 [drizzle-url]: https://orm.drizzle.team
 [next-url]: https://nextjs.org

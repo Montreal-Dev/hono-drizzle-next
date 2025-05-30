@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useTheme } from "next-themes";
 import { DarkMode } from "../icons/default";
@@ -19,9 +19,7 @@ export default function ThemeToggle() {
       className="cursor-pointer"
       onClick={toggleTheme}
     >
-      <DarkMode
-        className="relative top-0 w-5 h-5 rounded-sm fill-background"
-      />
+      <DarkMode className="relative top-0 w-5 h-5 rounded-sm fill-background" />
     </Button>
   );
 }

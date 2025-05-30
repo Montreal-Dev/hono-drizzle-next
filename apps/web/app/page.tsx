@@ -1,4 +1,4 @@
-'use server';
+"use server";
 
 import React, { JSX } from "react";
 import { Blob } from "@/components/icons/default";
@@ -21,7 +21,7 @@ const usefulLinks = [
 ];
 
 export default async function Page() {
-  const {connection, res} = await getConnection();
+  const { connection, res } = await getConnection();
 
   const displayPangram = () => (
     <>
@@ -39,9 +39,9 @@ export default async function Page() {
       let componentArray: JSX.Element[] = [];
       const item = res.query[0];
       componentArray = Object.keys(item).map((key) => (
-        <p key={key}>{`${key}: ${item?.[
-          key as keyof (typeof res.query)[0]
-        ]}`}</p>
+        <p key={key}>{`${key}: ${
+          item?.[key as keyof (typeof res.query)[0]]
+        }`}</p>
       ));
       return componentArray;
     }
@@ -56,12 +56,8 @@ export default async function Page() {
       <div className="absolute w-screen h-screen ">
         <div className="transition-all absolute w-full h-full bg-background overflow-hidden rounded-sm" />
         <div className="relative w-full h-full overflow-hidden z-0">
-          <Blob
-            className="absolute animate-float w-3/4 h-3/4 bottom-0 right-0 scale-90 origin-center mix-blend-lig opacity-95"
-          />
-          <Blob
-            className="absolute w-3/4 h-3/4 bottom-0 right-0 origin-center scale-120 blur-sm "
-          />
+          <Blob className="absolute animate-float w-3/4 h-3/4 bottom-0 right-0 scale-90 origin-center mix-blend-lig opacity-95" />
+          <Blob className="absolute w-3/4 h-3/4 bottom-0 right-0 origin-center scale-120 blur-sm " />
         </div>
       </div>
       <div className="relative flex flex-row w-screen h-screen overflow-hidden py-5 px-2 gap-2 text-foreground">

@@ -26,7 +26,7 @@ const getLocaleTime = () => {
 };
 
 export default function Clock() {
-  const locale = 'fr-CA';
+  const locale = "fr-CA";
   const ref = useRef<NodeJS.Timeout | null>(null);
   const [localTime, setLocalTime] = useState(getLocaleTime());
 
