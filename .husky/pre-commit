@@ -1,2 +1,2 @@
 npx lint-staged
-pnpm turbo run lint --filter=...[HEAD]
+pnpm turbo run lint
